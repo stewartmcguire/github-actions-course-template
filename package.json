@@ -8,8 +8,8 @@
     "src": "src"
   },
   "scripts": {
-    "build": "npx webpack --config ./src/webpack.config.js --mode production",
-    "dev": "npx webpack --config ./src/webpack.config.js --mode development --watch",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx webpack --config ./src/webpack.config.js --mode production",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider npx webpack --config ./src/webpack.config.js --mode development --watch",
     "test": "npx standard && npx jest"
   },
   "author": "githubtraining",
@@ -31,7 +31,7 @@
     "standard": "^14.3.1",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
-  },
-  "dependencies": {}
+    "webpack-dev-server": "^3.1.14",
+    "cross-env": "^7.0.3"
+  }
 }
