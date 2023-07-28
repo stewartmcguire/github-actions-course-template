@@ -6,14 +6,12 @@ describe('App', () => {
     fs.readFile('./public/main.js', 'utf8', (err, data) => {
       if (err) {
         done(err)
-      }
-      else {
+      } else {
         try {
           expect(err).toBe(null)
           expect(data).toMatchSnapshot()
           done()
-        }
-        catch (error) {
+        } catch (error) {
           done(error)
         }
       }
